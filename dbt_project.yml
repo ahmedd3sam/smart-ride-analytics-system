@@ -1,0 +1,31 @@
+name: 'NYC_fare_prediction'
+version: '1.0.0'
+
+profile: 'NYC_fare_prediction'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  NYC_fare_prediction:
+
+    # SILVER → RAW_SILVER
+    silver:
+      +schema: SILVER
+      
+    # GOLD → RAW_GOLD
+    gold:
+      +schema: GOLD
+      
+    # MARTS → RAW_MARTS
+    marts:
+      +schema: MARTS
+    

@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: Dim_DateTime
+    description: "PickUp / DropOff date & time"
+    columns:
+      - name: datetime_id
+        tests:
+          - not_null
+
+  - name: Dim_Location
+    description: "Location dimension table"
+    columns:
+      - name: zone_id
+        tests:
+          - not_null
+          
+
+
+  - name: Dim_Passenger
+    description: "Passenger count dimension."
+    columns:
+      - name: passenger_id
+        tests:
+          - unique
+          - not_null
+
+
+  - name: Dim_Payment
+    description: "Payment dimension."
+    columns:
+      - name: payment_id
+        tests:
+          - unique
+          - not_null
+   
+
+
+  - name: Fact_Taxi_Trips
+    description: "Fact table at trip grain."
+    columns:
+      - name: trip_id
+        tests:
+          - not_null
+
+ 
