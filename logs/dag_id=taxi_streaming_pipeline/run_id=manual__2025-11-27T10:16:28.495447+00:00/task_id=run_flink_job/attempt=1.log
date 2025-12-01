@@ -1,0 +1,128 @@
+[2025-11-27T10:16:44.252+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: taxi_streaming_pipeline.run_flink_job manual__2025-11-27T10:16:28.495447+00:00 [queued]>
+[2025-11-27T10:16:44.263+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: taxi_streaming_pipeline.run_flink_job manual__2025-11-27T10:16:28.495447+00:00 [queued]>
+[2025-11-27T10:16:44.263+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2025-11-27T10:16:44.282+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): run_flink_job> on 2025-11-27 10:16:28.495447+00:00
+[2025-11-27T10:16:44.286+0000] {standard_task_runner.py:57} INFO - Started process 191 to run task
+[2025-11-27T10:16:44.291+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'taxi_streaming_pipeline', 'run_flink_job', 'manual__2025-11-27T10:16:28.495447+00:00', '--job-id', '145', '--raw', '--subdir', 'DAGS_FOLDER/taxi_pipeline_dag.py', '--cfg-path', '/tmp/tmpsufhc8tk']
+[2025-11-27T10:16:44.293+0000] {standard_task_runner.py:85} INFO - Job 145: Subtask run_flink_job
+[2025-11-27T10:16:44.377+0000] {task_command.py:415} INFO - Running <TaskInstance: taxi_streaming_pipeline.run_flink_job manual__2025-11-27T10:16:28.495447+00:00 [running]> on host 485e0d4eae03
+[2025-11-27T10:16:44.494+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Menna' AIRFLOW_CTX_DAG_ID='taxi_streaming_pipeline' AIRFLOW_CTX_TASK_ID='run_flink_job' AIRFLOW_CTX_EXECUTION_DATE='2025-11-27T10:16:28.495447+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-27T10:16:28.495447+00:00'
+[2025-11-27T10:16:44.496+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-27T10:16:44.497+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n        echo "Submitting Flink job..."\n\n        # Check if Docker is available\n        if ! command -v docker &> /dev/null; then\n            echo "ERROR: Docker command not available"\n            exit 1\n        fi\n\n        # Use fixed container name (avoids Jinja2 template syntax issues)\n        JOB_MANAGER_NAME="flink-jobmanager"\n        \n        # Verify container is running using filter (no format needed)\n        if ! docker ps --filter "name=^${JOB_MANAGER_NAME}$" -q | grep -q .; then\n            echo "ERROR: Flink JobManager container not running"\n            echo "Available containers:"\n            docker ps || true\n            exit 1\n        fi\n\n        echo "Found Flink JobManager: $JOB_MANAGER_NAME"\n\n        JOB_FILE="/opt/flink/jobs/kafka_consumer_ui.py"\n        echo "Checking if job file exists: $JOB_FILE"\n        if ! docker exec "$JOB_MANAGER_NAME" test -f "$JOB_FILE"; then\n            echo "ERROR: Flink job file not found: $JOB_FILE"\n            echo "Files in /opt/flink/jobs:"\n            docker exec "$JOB_MANAGER_NAME" ls -la /opt/flink/jobs/ || true\n            exit 1\n        fi\n\n        echo "Job file found. Submitting Flink job..."\n        if docker exec "$JOB_MANAGER_NAME" flink run -py "$JOB_FILE" -d; then\n            echo "✓ Flink job submitted successfully"\n            echo "Check Flink UI at http://localhost:8081 for job status"\n        else\n            EXIT_CODE=$?\n            echo "ERROR: Flink job submission failed (exit code: $EXIT_CODE)"\n            echo "Flink JobManager logs (last 50 lines):"\n            docker logs "$JOB_MANAGER_NAME" 2>&1 | tail -50\n            exit $EXIT_CODE\n        fi\n        ']
+[2025-11-27T10:16:44.509+0000] {subprocess.py:86} INFO - Output:
+[2025-11-27T10:16:44.511+0000] {subprocess.py:93} INFO - Submitting Flink job...
+[2025-11-27T10:16:44.551+0000] {subprocess.py:93} INFO - Found Flink JobManager: flink-jobmanager
+[2025-11-27T10:16:44.552+0000] {subprocess.py:93} INFO - Checking if job file exists: /opt/flink/jobs/kafka_consumer_ui.py
+[2025-11-27T10:16:44.677+0000] {subprocess.py:93} INFO - Job file found. Submitting Flink job...
+[2025-11-27T10:16:53.863+0000] {subprocess.py:93} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-11-27T10:16:53.865+0000] {subprocess.py:93} INFO - WARNING: Illegal reflective access by org.apache.flink.api.java.ClosureCleaner (file:/opt/flink/lib/flink-dist-1.17.2.jar) to field java.lang.String.value
+[2025-11-27T10:16:53.865+0000] {subprocess.py:93} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.flink.api.java.ClosureCleaner
+[2025-11-27T10:16:53.865+0000] {subprocess.py:93} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-11-27T10:16:53.865+0000] {subprocess.py:93} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-11-27T10:16:55.832+0000] {subprocess.py:93} INFO - Job has been submitted with JobID e1190ae1a854b79aa46ed2d8d4c8ca2f
+[2025-11-27T10:16:55.856+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-11-27T10:16:55.856+0000] {subprocess.py:93} INFO -   File "/opt/flink/jobs/kafka_consumer_ui.py", line 286, in <module>
+[2025-11-27T10:16:55.856+0000] {subprocess.py:93} INFO -     env.execute("Flink Kafka Taxi Dashboard Job")
+[2025-11-27T10:16:55.857+0000] {subprocess.py:93} INFO -   File "/opt/flink/opt/python/pyflink.zip/pyflink/datastream/stream_execution_environment.py", line 763, in execute
+[2025-11-27T10:16:55.857+0000] {subprocess.py:93} INFO -   File "/opt/flink/opt/python/pyflink.zip/pyflink/datastream/stream_execution_environment.py", line 1012, in _generate_stream_graph
+[2025-11-27T10:16:55.857+0000] {subprocess.py:93} INFO -   File "/opt/flink/opt/python/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+[2025-11-27T10:16:55.857+0000] {subprocess.py:93} INFO -   File "/opt/flink/opt/python/pyflink.zip/pyflink/util/exceptions.py", line 146, in deco
+[2025-11-27T10:16:55.857+0000] {subprocess.py:93} INFO -   File "/opt/flink/opt/python/py4j-0.10.9.7-src.zip/py4j/protocol.py", line 326, in get_return_value
+[2025-11-27T10:16:55.858+0000] {subprocess.py:93} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o8.getStreamGraph.
+[2025-11-27T10:16:55.858+0000] {subprocess.py:93} INFO - : java.lang.IllegalStateException: No operators defined in streaming topology. Cannot execute.
+[2025-11-27T10:16:55.858+0000] {subprocess.py:93} INFO - 	at org.apache.flink.streaming.api.environment.StreamExecutionEnvironment.getStreamGraphGenerator(StreamExecutionEnvironment.java:2290)
+[2025-11-27T10:16:55.858+0000] {subprocess.py:93} INFO - 	at org.apache.flink.streaming.api.environment.StreamExecutionEnvironment.getStreamGraph(StreamExecutionEnvironment.java:2257)
+[2025-11-27T10:16:55.859+0000] {subprocess.py:93} INFO - 	at org.apache.flink.streaming.api.environment.StreamExecutionEnvironment.getStreamGraph(StreamExecutionEnvironment.java:2248)
+[2025-11-27T10:16:55.859+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2025-11-27T10:16:55.859+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+[2025-11-27T10:16:55.859+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+[2025-11-27T10:16:55.859+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+[2025-11-27T10:16:55.859+0000] {subprocess.py:93} INFO - 	at org.apache.flink.api.python.shaded.py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2025-11-27T10:16:55.860+0000] {subprocess.py:93} INFO - 	at org.apache.flink.api.python.shaded.py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+[2025-11-27T10:16:55.860+0000] {subprocess.py:93} INFO - 	at org.apache.flink.api.python.shaded.py4j.Gateway.invoke(Gateway.java:282)
+[2025-11-27T10:16:55.860+0000] {subprocess.py:93} INFO - 	at org.apache.flink.api.python.shaded.py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2025-11-27T10:16:55.860+0000] {subprocess.py:93} INFO - 	at org.apache.flink.api.python.shaded.py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2025-11-27T10:16:55.860+0000] {subprocess.py:93} INFO - 	at org.apache.flink.api.python.shaded.py4j.GatewayConnection.run(GatewayConnection.java:238)
+[2025-11-27T10:16:55.860+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Unknown Source)
+[2025-11-27T10:16:55.860+0000] {subprocess.py:93} INFO - 
+[2025-11-27T10:16:55.898+0000] {subprocess.py:93} INFO - org.apache.flink.client.program.ProgramAbortException: java.lang.RuntimeException: Python process exits with code: 1
+[2025-11-27T10:16:55.898+0000] {subprocess.py:93} INFO - 	at org.apache.flink.client.python.PythonDriver.main(PythonDriver.java:140)
+[2025-11-27T10:16:55.898+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2025-11-27T10:16:55.898+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+[2025-11-27T10:16:55.898+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+[2025-11-27T10:16:55.899+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+[2025-11-27T10:16:55.899+0000] {subprocess.py:93} INFO - 	at org.apache.flink.client.program.PackagedProgram.callMainMethod(PackagedProgram.java:355)
+[2025-11-27T10:16:55.899+0000] {subprocess.py:93} INFO - 	at org.apache.flink.client.program.PackagedProgram.invokeInteractiveModeForExecution(PackagedProgram.java:222)
+[2025-11-27T10:16:55.899+0000] {subprocess.py:93} INFO - 	at org.apache.flink.client.ClientUtils.executeProgram(ClientUtils.java:105)
+[2025-11-27T10:16:55.899+0000] {subprocess.py:93} INFO - 	at org.apache.flink.client.cli.CliFrontend.executeProgram(CliFrontend.java:851)
+[2025-11-27T10:16:55.899+0000] {subprocess.py:93} INFO - 	at org.apache.flink.client.cli.CliFrontend.run(CliFrontend.java:245)
+[2025-11-27T10:16:55.899+0000] {subprocess.py:93} INFO - 	at org.apache.flink.client.cli.CliFrontend.parseAndRun(CliFrontend.java:1095)
+[2025-11-27T10:16:55.900+0000] {subprocess.py:93} INFO - 	at org.apache.flink.client.cli.CliFrontend.lambda$mainInternal$9(CliFrontend.java:1189)
+[2025-11-27T10:16:55.900+0000] {subprocess.py:93} INFO - 	at org.apache.flink.runtime.security.contexts.NoOpSecurityContext.runSecured(NoOpSecurityContext.java:28)
+[2025-11-27T10:16:55.900+0000] {subprocess.py:93} INFO - 	at org.apache.flink.client.cli.CliFrontend.mainInternal(CliFrontend.java:1189)
+[2025-11-27T10:16:55.900+0000] {subprocess.py:93} INFO - 	at org.apache.flink.client.cli.CliFrontend.main(CliFrontend.java:1157)
+[2025-11-27T10:16:55.900+0000] {subprocess.py:93} INFO - Caused by: java.lang.RuntimeException: Python process exits with code: 1
+[2025-11-27T10:16:55.900+0000] {subprocess.py:93} INFO - 	at org.apache.flink.client.python.PythonDriver.main(PythonDriver.java:130)
+[2025-11-27T10:16:55.900+0000] {subprocess.py:93} INFO - 	... 14 more
+[2025-11-27T10:16:55.963+0000] {subprocess.py:93} INFO - ERROR: Flink job submission failed (exit code: 31)
+[2025-11-27T10:16:55.963+0000] {subprocess.py:93} INFO - Flink JobManager logs (last 50 lines):
+[2025-11-27T10:16:56.053+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+[2025-11-27T10:16:56.053+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+[2025-11-27T10:16:56.053+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+[2025-11-27T10:16:56.053+0000] {subprocess.py:93} INFO - 	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.lambda$handleRpcInvocation$0(AkkaRpcActor.java:301)
+[2025-11-27T10:16:56.053+0000] {subprocess.py:93} INFO - 	at org.apache.flink.runtime.concurrent.akka.ClassLoadingUtils.runWithContextClassLoader(ClassLoadingUtils.java:83)
+[2025-11-27T10:16:56.054+0000] {subprocess.py:93} INFO - 	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcInvocation(AkkaRpcActor.java:300)
+[2025-11-27T10:16:56.054+0000] {subprocess.py:93} INFO - 	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleRpcMessage(AkkaRpcActor.java:222)
+[2025-11-27T10:16:56.054+0000] {subprocess.py:93} INFO - 	at org.apache.flink.runtime.rpc.akka.FencedAkkaRpcActor.handleRpcMessage(FencedAkkaRpcActor.java:84)
+[2025-11-27T10:16:56.054+0000] {subprocess.py:93} INFO - 	at org.apache.flink.runtime.rpc.akka.AkkaRpcActor.handleMessage(AkkaRpcActor.java:168)
+[2025-11-27T10:16:56.054+0000] {subprocess.py:93} INFO - 	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:24)
+[2025-11-27T10:16:56.054+0000] {subprocess.py:93} INFO - 	at akka.japi.pf.UnitCaseStatement.apply(CaseStatements.scala:20)
+[2025-11-27T10:16:56.054+0000] {subprocess.py:93} INFO - 	at scala.PartialFunction.applyOrElse(PartialFunction.scala:127)
+[2025-11-27T10:16:56.054+0000] {subprocess.py:93} INFO - 	at scala.PartialFunction.applyOrElse$(PartialFunction.scala:126)
+[2025-11-27T10:16:56.055+0000] {subprocess.py:93} INFO - 	at akka.japi.pf.UnitCaseStatement.applyOrElse(CaseStatements.scala:20)
+[2025-11-27T10:16:56.055+0000] {subprocess.py:93} INFO - 	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:175)
+[2025-11-27T10:16:56.055+0000] {subprocess.py:93} INFO - 	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+[2025-11-27T10:16:56.055+0000] {subprocess.py:93} INFO - 	at scala.PartialFunction$OrElse.applyOrElse(PartialFunction.scala:176)
+[2025-11-27T10:16:56.055+0000] {subprocess.py:93} INFO - 	at akka.actor.Actor.aroundReceive(Actor.scala:537)
+[2025-11-27T10:16:56.055+0000] {subprocess.py:93} INFO - 	at akka.actor.Actor.aroundReceive$(Actor.scala:535)
+[2025-11-27T10:16:56.055+0000] {subprocess.py:93} INFO - 	at akka.actor.AbstractActor.aroundReceive(AbstractActor.scala:220)
+[2025-11-27T10:16:56.055+0000] {subprocess.py:93} INFO - 	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:579)
+[2025-11-27T10:16:56.055+0000] {subprocess.py:93} INFO - 	at akka.actor.ActorCell.invoke(ActorCell.scala:547)
+[2025-11-27T10:16:56.055+0000] {subprocess.py:93} INFO - 	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:270)
+[2025-11-27T10:16:56.056+0000] {subprocess.py:93} INFO - 	at akka.dispatch.Mailbox.run(Mailbox.scala:231)
+[2025-11-27T10:16:56.056+0000] {subprocess.py:93} INFO - 	at akka.dispatch.Mailbox.exec(Mailbox.scala:243)
+[2025-11-27T10:16:56.056+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)
+[2025-11-27T10:16:56.056+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)
+[2025-11-27T10:16:56.056+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)
+[2025-11-27T10:16:56.056+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)
+[2025-11-27T10:16:56.056+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)
+[2025-11-27T10:16:56.056+0000] {subprocess.py:93} INFO - Caused by: java.util.concurrent.CompletionException: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+[2025-11-27T10:16:56.057+0000] {subprocess.py:93} INFO - 	at org.apache.flink.runtime.scheduler.DefaultExecutionDeployer.lambda$assignResource$4(DefaultExecutionDeployer.java:227)
+[2025-11-27T10:16:56.057+0000] {subprocess.py:93} INFO - 	... 40 more
+[2025-11-27T10:16:56.057+0000] {subprocess.py:93} INFO - Caused by: java.util.concurrent.CompletionException: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+[2025-11-27T10:16:56.057+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(Unknown Source)
+[2025-11-27T10:16:56.057+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(Unknown Source)
+[2025-11-27T10:16:56.057+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(Unknown Source)
+[2025-11-27T10:16:56.057+0000] {subprocess.py:93} INFO - 	... 38 more
+[2025-11-27T10:16:56.057+0000] {subprocess.py:93} INFO - Caused by: org.apache.flink.runtime.jobmanager.scheduler.NoResourceAvailableException: Could not acquire the minimum required resources.
+[2025-11-27T10:16:56.057+0000] {subprocess.py:93} INFO - 2025-11-27 10:16:55,917 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job e1190ae1a854b79aa46ed2d8d4c8ca2f has been registered for cleanup in the JobResultStore after reaching a terminal state.
+[2025-11-27T10:16:56.057+0000] {subprocess.py:93} INFO - 2025-11-27 10:16:55,918 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Stopping the JobMaster for job 'insert-into_default_catalog.default_database.taxi_trips_dashboard' (e1190ae1a854b79aa46ed2d8d4c8ca2f).
+[2025-11-27T10:16:56.058+0000] {subprocess.py:93} INFO - 2025-11-27 10:16:55,923 INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore [] - Shutting down
+[2025-11-27T10:16:56.058+0000] {subprocess.py:93} INFO - 2025-11-27 10:16:55,923 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Close ResourceManager connection edf0389cc67b40ca927a4bcdb3af4356: Stopping JobMaster for job 'insert-into_default_catalog.default_database.taxi_trips_dashboard' (e1190ae1a854b79aa46ed2d8d4c8ca2f).
+[2025-11-27T10:16:56.058+0000] {subprocess.py:93} INFO - 2025-11-27 10:16:55,924 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Disconnect job manager 00000000000000000000000000000000@akka.tcp://flink@flink-jobmanager:6123/user/rpc/jobmanager_7 for job e1190ae1a854b79aa46ed2d8d4c8ca2f from the resource manager.
+[2025-11-27T10:16:56.058+0000] {subprocess.py:93} INFO - 2025-11-27 10:16:55,924 INFO  org.apache.flink.runtime.source.coordinator.SourceCoordinator [] - Closing SourceCoordinator for source Source: taxi_trips[1].
+[2025-11-27T10:16:56.058+0000] {subprocess.py:93} INFO - 2025-11-27 10:16:55,926 INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.utils.AppInfoParser [] - App info kafka.admin.client for flink-group-enumerator-admin-client unregistered
+[2025-11-27T10:16:56.058+0000] {subprocess.py:93} INFO - 2025-11-27 10:16:55,933 INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics [] - Metrics scheduler closed
+[2025-11-27T10:16:56.058+0000] {subprocess.py:93} INFO - 2025-11-27 10:16:55,933 INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics [] - Closing reporter org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.JmxReporter
+[2025-11-27T10:16:56.058+0000] {subprocess.py:93} INFO - 2025-11-27 10:16:55,933 INFO  org.apache.flink.kafka.shaded.org.apache.kafka.common.metrics.Metrics [] - Metrics reporters closed
+[2025-11-27T10:16:56.058+0000] {subprocess.py:93} INFO - 2025-11-27 10:16:55,934 INFO  org.apache.flink.runtime.source.coordinator.SourceCoordinator [] - Source coordinator for source Source: taxi_trips[1] closed.
+[2025-11-27T10:16:56.058+0000] {subprocess.py:97} INFO - Command exited with return code 31
+[2025-11-27T10:16:56.073+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 31.
+[2025-11-27T10:16:56.077+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=taxi_streaming_pipeline, task_id=run_flink_job, execution_date=20251127T101628, start_date=20251127T101644, end_date=20251127T101656
+[2025-11-27T10:16:56.088+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 145 for task run_flink_job (Bash command failed. The command returned a non-zero exit code 31.; 191)
+[2025-11-27T10:16:56.095+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-11-27T10:16:56.118+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

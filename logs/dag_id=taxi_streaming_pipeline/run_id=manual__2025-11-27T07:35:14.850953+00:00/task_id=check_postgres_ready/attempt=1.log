@@ -1,0 +1,14 @@
+[2025-11-27T07:35:23.477+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: taxi_streaming_pipeline.check_postgres_ready manual__2025-11-27T07:35:14.850953+00:00 [queued]>
+[2025-11-27T07:35:23.484+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: taxi_streaming_pipeline.check_postgres_ready manual__2025-11-27T07:35:14.850953+00:00 [queued]>
+[2025-11-27T07:35:23.484+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2025-11-27T07:35:23.495+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): check_postgres_ready> on 2025-11-27 07:35:14.850953+00:00
+[2025-11-27T07:35:23.498+0000] {standard_task_runner.py:57} INFO - Started process 76 to run task
+[2025-11-27T07:35:23.501+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'taxi_streaming_pipeline', 'check_postgres_ready', 'manual__2025-11-27T07:35:14.850953+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/taxi_pipeline_dag.py', '--cfg-path', '/tmp/tmp645kixot']
+[2025-11-27T07:35:23.503+0000] {standard_task_runner.py:85} INFO - Job 17: Subtask check_postgres_ready
+[2025-11-27T07:35:23.557+0000] {task_command.py:415} INFO - Running <TaskInstance: taxi_streaming_pipeline.check_postgres_ready manual__2025-11-27T07:35:14.850953+00:00 [running]> on host d629b7fb5869
+[2025-11-27T07:35:23.628+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Menna' AIRFLOW_CTX_DAG_ID='taxi_streaming_pipeline' AIRFLOW_CTX_TASK_ID='check_postgres_ready' AIRFLOW_CTX_EXECUTION_DATE='2025-11-27T07:35:14.850953+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-27T07:35:14.850953+00:00'
+[2025-11-27T07:35:23.635+0000] {logging_mixin.py:151} INFO - PostgreSQL is ready!
+[2025-11-27T07:35:23.635+0000] {python.py:194} INFO - Done. Returned value was: True
+[2025-11-27T07:35:23.663+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=taxi_streaming_pipeline, task_id=check_postgres_ready, execution_date=20251127T073514, start_date=20251127T073523, end_date=20251127T073523
+[2025-11-27T07:35:23.692+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-11-27T07:35:23.719+0000] {taskinstance.py:2776} INFO - 1 downstream tasks scheduled from follow-on schedule check

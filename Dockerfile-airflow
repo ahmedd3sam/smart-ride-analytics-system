@@ -1,0 +1,32 @@
+FROM apache/airflow:2.7.1
+
+USER root
+
+# Install system dependencies for psycopg2
+RUN apt-get update && \
+    apt-get install -y gcc libpq-dev python3-dev && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+# Install newer Docker client (version 24.x or later to support API 1.44+)
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release && \
+    install -m 0755 -d /etc/apt/keyrings && \
+    curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg && \
+    chmod a+r /etc/apt/keyrings/docker.gpg && \
+    echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+    $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends docker-ce-cli && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Switch to airflow user to install Python packages
+USER airflow
+
+RUN pip install --no-cache-dir psycopg2-binary
+

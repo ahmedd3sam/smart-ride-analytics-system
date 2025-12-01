@@ -1,0 +1,28 @@
+[2025-11-27T10:54:47.039+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: taxi_streaming_pipeline.verify_postgres_data manual__2025-11-27T10:53:53.872298+00:00 [queued]>
+[2025-11-27T10:54:47.053+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: taxi_streaming_pipeline.verify_postgres_data manual__2025-11-27T10:53:53.872298+00:00 [queued]>
+[2025-11-27T10:54:47.053+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2025-11-27T10:54:47.072+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): verify_postgres_data> on 2025-11-27 10:53:53.872298+00:00
+[2025-11-27T10:54:47.086+0000] {standard_task_runner.py:57} INFO - Started process 282 to run task
+[2025-11-27T10:54:47.107+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'taxi_streaming_pipeline', 'verify_postgres_data', 'manual__2025-11-27T10:53:53.872298+00:00', '--job-id', '232', '--raw', '--subdir', 'DAGS_FOLDER/taxi_pipeline_dag.py', '--cfg-path', '/tmp/tmp4__j4u34']
+[2025-11-27T10:54:47.112+0000] {standard_task_runner.py:85} INFO - Job 232: Subtask verify_postgres_data
+[2025-11-27T10:54:47.298+0000] {task_command.py:415} INFO - Running <TaskInstance: taxi_streaming_pipeline.verify_postgres_data manual__2025-11-27T10:53:53.872298+00:00 [running]> on host 485e0d4eae03
+[2025-11-27T10:54:47.474+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Menna' AIRFLOW_CTX_DAG_ID='taxi_streaming_pipeline' AIRFLOW_CTX_TASK_ID='verify_postgres_data' AIRFLOW_CTX_EXECUTION_DATE='2025-11-27T10:53:53.872298+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-27T10:53:53.872298+00:00'
+[2025-11-27T10:54:47.476+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-27T10:54:47.480+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n        echo "Verifying Postgres data..."\n        echo "Waiting for Flink to process and load data..."\n        sleep 30\n\n        # Check if psql is available\n        if command -v psql &> /dev/null; then\n            echo "Querying PostgreSQL for data count..."\n            PGPASSWORD=*** psql -h postgres -U user -d taxi_db -c "SELECT COUNT(*) as total_records FROM taxi_trips_dashboard;" 2>/dev/null || {\n                echo "Note: Table may not exist yet, or Flink job is still processing"\n                echo "This is normal if the Flink job just started"\n            }\n        else\n            echo "psql not available. Skipping data verification."\n            echo "You can verify manually:"\n            echo "  PGPASSWORD=*** psql -h postgres -U user -d taxi_db -c \'SELECT COUNT(*) FROM taxi_trips_dashboard;\'"\n        fi\n\n        echo ""\n        echo "Pipeline orchestration complete!"\n        echo "Check Grafana at http://localhost:3000 for visualization"\n        echo "Check Flink UI at http://localhost:8081 for job status"\n        ']
+[2025-11-27T10:54:47.491+0000] {subprocess.py:86} INFO - Output:
+[2025-11-27T10:54:47.495+0000] {subprocess.py:93} INFO - Verifying Postgres data...
+[2025-11-27T10:54:47.496+0000] {subprocess.py:93} INFO - Waiting for Flink to process and load data...
+[2025-11-27T10:55:18.619+0000] {subprocess.py:93} INFO - Querying PostgreSQL for data count...
+[2025-11-27T10:55:21.366+0000] {subprocess.py:93} INFO -  total_records
+[2025-11-27T10:55:21.367+0000] {subprocess.py:93} INFO - ---------------
+[2025-11-27T10:55:21.368+0000] {subprocess.py:93} INFO -        7889031
+[2025-11-27T10:55:21.368+0000] {subprocess.py:93} INFO - (1 row)
+[2025-11-27T10:55:21.369+0000] {subprocess.py:93} INFO - 
+[2025-11-27T10:55:21.372+0000] {subprocess.py:93} INFO - 
+[2025-11-27T10:55:21.372+0000] {subprocess.py:93} INFO - Pipeline orchestration complete!
+[2025-11-27T10:55:21.373+0000] {subprocess.py:93} INFO - Check Grafana at http://localhost:3000 for visualization
+[2025-11-27T10:55:21.373+0000] {subprocess.py:93} INFO - Check Flink UI at http://localhost:8081 for job status
+[2025-11-27T10:55:21.373+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-27T10:55:21.430+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=taxi_streaming_pipeline, task_id=verify_postgres_data, execution_date=20251127T105353, start_date=20251127T105447, end_date=20251127T105521
+[2025-11-27T10:55:21.454+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-11-27T10:55:21.480+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

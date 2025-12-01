@@ -1,0 +1,26 @@
+[2025-11-27T08:11:46.326+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: taxi_streaming_pipeline.run_flink_job manual__2025-11-27T08:10:19.987180+00:00 [queued]>
+[2025-11-27T08:11:46.333+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: taxi_streaming_pipeline.run_flink_job manual__2025-11-27T08:10:19.987180+00:00 [queued]>
+[2025-11-27T08:11:46.333+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2025-11-27T08:11:46.343+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): run_flink_job> on 2025-11-27 08:10:19.987180+00:00
+[2025-11-27T08:11:46.348+0000] {standard_task_runner.py:57} INFO - Started process 146 to run task
+[2025-11-27T08:11:46.351+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'taxi_streaming_pipeline', 'run_flink_job', 'manual__2025-11-27T08:10:19.987180+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/taxi_pipeline_dag.py', '--cfg-path', '/tmp/tmphw1i5etq']
+[2025-11-27T08:11:46.352+0000] {standard_task_runner.py:85} INFO - Job 49: Subtask run_flink_job
+[2025-11-27T08:11:46.406+0000] {task_command.py:415} INFO - Running <TaskInstance: taxi_streaming_pipeline.run_flink_job manual__2025-11-27T08:10:19.987180+00:00 [running]> on host d629b7fb5869
+[2025-11-27T08:11:46.485+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Menna' AIRFLOW_CTX_DAG_ID='taxi_streaming_pipeline' AIRFLOW_CTX_TASK_ID='run_flink_job' AIRFLOW_CTX_EXECUTION_DATE='2025-11-27T08:10:19.987180+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-27T08:10:19.987180+00:00'
+[2025-11-27T08:11:46.486+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-27T08:11:46.487+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n        echo "Submitting Flink Job to consume from Kafka, transform, and load to Postgres..."\n        \n        # Wait a bit for Kafka messages to be available\n        echo "Waiting for Kafka messages to be available..."\n        sleep 10\n        \n        # Submit the Flink Python job\n        # The job file is mounted at /opt/flink/jobs/kafka_consumer_ui.py in the Flink container\n        # Try using docker exec if docker socket is available, otherwise use alternative methods\n        \n        if command -v docker &> /dev/null; then\n            if docker ps --filter "name=^flink-jobmanager$" -q | grep -q .; then\n                echo "Submitting Flink job via docker exec..."\n                # Check if job is already running to avoid duplicates\n                docker exec flink-jobmanager flink run -py /opt/flink/jobs/kafka_consumer_ui.py -d &&                 echo "Flink job submitted successfully. Check Flink UI at http://localhost:8081 for job status" ||                 echo "Warning: Flink job submission may have failed. Check Flink UI manually."\n            else\n                echo "Error: flink-jobmanager container is not running"\n                exit 1\n            fi\n        else\n            echo "Docker command not available. Please submit Flink job manually:"\n            echo "  docker exec flink-jobmanager flink run -py /opt/flink/jobs/kafka_consumer_ui.py -d"\n            echo "Or access Flink UI at http://localhost:8081 and submit the job through the web interface"\n        fi\n        \n        echo "Flink job submission process completed"\n        ']
+[2025-11-27T08:11:46.494+0000] {subprocess.py:86} INFO - Output:
+[2025-11-27T08:11:46.496+0000] {subprocess.py:93} INFO - Submitting Flink Job to consume from Kafka, transform, and load to Postgres...
+[2025-11-27T08:11:46.496+0000] {subprocess.py:93} INFO - Waiting for Kafka messages to be available...
+[2025-11-27T08:11:56.481+0000] {subprocess.py:93} INFO - Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+[2025-11-27T08:11:56.483+0000] {subprocess.py:93} INFO - Error: flink-jobmanager container is not running
+[2025-11-27T08:11:56.483+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-11-27T08:11:56.496+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-27T08:11:56.500+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=taxi_streaming_pipeline, task_id=run_flink_job, execution_date=20251127T081019, start_date=20251127T081146, end_date=20251127T081156
+[2025-11-27T08:11:56.510+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 49 for task run_flink_job (Bash command failed. The command returned a non-zero exit code 1.; 146)
+[2025-11-27T08:11:56.532+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-11-27T08:11:56.553+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

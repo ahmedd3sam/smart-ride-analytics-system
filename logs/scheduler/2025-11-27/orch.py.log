@@ -1,0 +1,357 @@
+[2025-11-27T07:48:31.822+0000] {processor.py:157} INFO - Started process (PID=32) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:48:31.823+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:48:31.824+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:48:31.824+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:48:31.846+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:48:31.973+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:48:31.973+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T07:48:31.974+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:48:31.974+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:48:31.983+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:48:31.983+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:48:32.002+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.185 seconds
+[2025-11-27T07:49:02.044+0000] {processor.py:157} INFO - Started process (PID=36) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:49:02.045+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:49:02.046+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:49:02.046+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:49:02.060+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:49:02.102+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:49:02.101+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:49:02.116+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:49:02.116+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:49:02.134+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.095 seconds
+[2025-11-27T07:49:32.252+0000] {processor.py:157} INFO - Started process (PID=92) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:49:32.264+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:49:32.265+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:49:32.265+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:49:32.278+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:49:32.410+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:49:32.410+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T07:49:32.410+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:49:32.410+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:49:32.526+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:49:32.526+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:49:32.546+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.298 seconds
+[2025-11-27T07:50:02.641+0000] {processor.py:157} INFO - Started process (PID=109) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:50:02.643+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:50:02.643+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:50:02.643+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:50:02.655+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:50:02.688+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:50:02.688+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:50:02.700+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:50:02.700+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:50:02.718+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.080 seconds
+[2025-11-27T07:50:32.812+0000] {processor.py:157} INFO - Started process (PID=110) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:50:32.818+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:50:32.819+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:50:32.819+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:50:32.830+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:50:33.052+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:50:33.052+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T07:50:33.052+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:50:33.052+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:50:33.062+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:50:33.061+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:50:33.081+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.272 seconds
+[2025-11-27T07:51:03.177+0000] {processor.py:157} INFO - Started process (PID=113) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:51:03.178+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:51:03.179+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:51:03.178+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:51:03.190+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:51:03.223+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:51:03.223+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:51:03.347+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:51:03.347+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:51:03.365+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.192 seconds
+[2025-11-27T07:51:33.454+0000] {processor.py:157} INFO - Started process (PID=115) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:51:33.455+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:51:33.456+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:51:33.456+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:51:33.468+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:51:33.716+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:51:33.716+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T07:51:33.716+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:51:33.716+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:51:33.726+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:51:33.726+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:51:33.749+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.300 seconds
+[2025-11-27T07:52:03.843+0000] {processor.py:157} INFO - Started process (PID=117) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:52:03.844+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:52:03.845+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:52:03.845+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:52:03.857+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:52:03.872+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:52:03.872+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:52:03.886+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:52:03.885+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:52:03.903+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.064 seconds
+[2025-11-27T07:52:33.925+0000] {processor.py:157} INFO - Started process (PID=118) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:52:33.936+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:52:33.937+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:52:33.937+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:52:33.949+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:52:34.054+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:52:34.054+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T07:52:34.054+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:52:34.054+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:52:34.065+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:52:34.065+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:52:34.085+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.164 seconds
+[2025-11-27T07:53:04.105+0000] {processor.py:157} INFO - Started process (PID=120) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:53:04.107+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:53:04.108+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:53:04.108+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:53:04.123+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:53:04.166+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:53:04.165+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:53:04.180+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:53:04.179+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:53:04.205+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.104 seconds
+[2025-11-27T07:53:34.316+0000] {processor.py:157} INFO - Started process (PID=122) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:53:34.317+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:53:34.318+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:53:34.318+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:53:34.331+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:53:34.442+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:53:34.442+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T07:53:34.443+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:53:34.442+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:53:34.453+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:53:34.452+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:53:34.472+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.161 seconds
+[2025-11-27T07:54:04.528+0000] {processor.py:157} INFO - Started process (PID=138) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:54:04.529+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:54:04.530+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:54:04.530+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:54:04.546+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:54:04.584+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:54:04.583+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:54:04.599+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:54:04.599+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:54:04.619+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.096 seconds
+[2025-11-27T07:54:34.818+0000] {processor.py:157} INFO - Started process (PID=183) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:54:34.826+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:54:34.827+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:54:34.826+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:54:34.839+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:54:34.950+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:54:34.950+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T07:54:34.951+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:54:34.951+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:54:34.962+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:54:34.962+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:54:34.981+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.167 seconds
+[2025-11-27T07:55:05.935+0000] {processor.py:157} INFO - Started process (PID=199) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:55:05.936+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:55:05.937+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:55:05.937+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:55:05.950+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:55:05.985+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:55:05.985+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:55:05.998+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:55:05.998+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:55:06.015+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.084 seconds
+[2025-11-27T07:55:36.140+0000] {processor.py:157} INFO - Started process (PID=201) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:55:36.141+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:55:36.142+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:55:36.142+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:55:36.154+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:55:36.169+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:55:36.169+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:55:36.182+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:55:36.182+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:55:36.200+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.064 seconds
+[2025-11-27T07:56:06.301+0000] {processor.py:157} INFO - Started process (PID=203) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:56:06.302+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:56:06.303+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:56:06.303+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:56:06.316+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:56:06.416+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:56:06.416+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T07:56:06.416+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:56:06.416+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:56:06.427+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:56:06.427+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:56:06.446+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.149 seconds
+[2025-11-27T07:56:36.575+0000] {processor.py:157} INFO - Started process (PID=205) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:56:36.576+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:56:36.578+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:56:36.577+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:56:36.601+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:56:36.642+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:56:36.641+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:56:36.660+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:56:36.659+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:56:36.683+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.113 seconds
+[2025-11-27T07:57:06.784+0000] {processor.py:157} INFO - Started process (PID=207) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:57:06.786+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:57:06.786+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:57:06.786+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:57:06.798+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:57:06.813+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:57:06.813+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:57:06.825+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:57:06.825+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:57:06.843+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.062 seconds
+[2025-11-27T07:57:37.037+0000] {processor.py:157} INFO - Started process (PID=210) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:57:37.038+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:57:37.039+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:57:37.039+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:57:37.053+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:57:37.071+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:57:37.071+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:57:37.087+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:57:37.087+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:57:37.109+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.076 seconds
+[2025-11-27T07:58:07.223+0000] {processor.py:157} INFO - Started process (PID=212) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:58:07.224+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:58:07.226+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:58:07.225+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:58:07.247+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:58:07.419+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:58:07.418+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T07:58:07.420+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:58:07.419+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:58:07.439+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:58:07.439+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:58:07.465+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.247 seconds
+[2025-11-27T07:58:22.328+0000] {processor.py:157} INFO - Started process (PID=213) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:58:22.329+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:58:22.330+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:58:22.330+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:58:22.346+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:58:22.364+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:58:22.363+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:58:22.381+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:58:22.380+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:58:22.406+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.082 seconds
+[2025-11-27T07:58:30.624+0000] {processor.py:157} INFO - Started process (PID=216) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:58:30.626+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:58:30.627+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:58:30.627+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:58:30.659+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:58:30.683+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:58:30.683+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:58:30.706+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:58:30.705+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:58:30.732+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.116 seconds
+[2025-11-27T07:59:00.841+0000] {processor.py:157} INFO - Started process (PID=218) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:59:00.842+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:59:00.843+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:59:00.843+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:59:00.862+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:59:00.888+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:59:00.887+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:59:00.902+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:59:00.902+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:59:00.923+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.086 seconds
+[2025-11-27T07:59:31.057+0000] {processor.py:157} INFO - Started process (PID=220) to work on /opt/airflow/dags/orch.py
+[2025-11-27T07:59:31.059+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T07:59:31.069+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:59:31.068+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T07:59:31.083+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T07:59:31.210+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:59:31.210+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T07:59:31.211+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:59:31.211+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T07:59:31.225+0000] {logging_mixin.py:151} INFO - [2025-11-27T07:59:31.224+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T07:59:31.251+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.198 seconds
+[2025-11-27T08:00:01.375+0000] {processor.py:157} INFO - Started process (PID=222) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:00:01.378+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:00:01.379+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:00:01.379+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:00:01.394+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:00:01.440+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:00:01.439+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:00:01.456+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:00:01.456+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:00:01.482+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.117 seconds
+[2025-11-27T08:00:31.782+0000] {processor.py:157} INFO - Started process (PID=226) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:00:31.783+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:00:31.784+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:00:31.783+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:00:31.799+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:00:31.817+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:00:31.817+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:00:31.834+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:00:31.834+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:00:31.862+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.083 seconds
+[2025-11-27T08:01:02.002+0000] {processor.py:157} INFO - Started process (PID=228) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:01:02.004+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:01:02.006+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:02.005+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:01:02.021+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:01:02.042+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:02.042+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:01:02.058+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:02.058+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:01:02.081+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.085 seconds
+[2025-11-27T08:01:26.178+0000] {processor.py:157} INFO - Started process (PID=230) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:01:26.179+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:01:26.180+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:26.180+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:01:26.197+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:01:26.316+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:26.316+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T08:01:26.317+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:26.316+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:01:26.329+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:26.328+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:01:26.353+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.179 seconds
+[2025-11-27T08:01:30.240+0000] {processor.py:157} INFO - Started process (PID=231) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:01:30.241+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:01:30.241+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:30.241+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:01:30.257+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:01:30.275+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:30.275+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:01:30.290+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:30.290+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:01:30.316+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.082 seconds
+[2025-11-27T08:01:35.265+0000] {processor.py:157} INFO - Started process (PID=232) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:01:35.267+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:01:35.269+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:35.268+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:01:35.285+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:01:35.308+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:35.308+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:01:35.324+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:35.324+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:01:35.347+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.087 seconds
+[2025-11-27T08:01:47.427+0000] {processor.py:157} INFO - Started process (PID=234) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:01:47.428+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:01:47.429+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:47.429+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:01:47.442+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:01:47.459+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:47.459+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:01:47.472+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:01:47.472+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:01:47.492+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.069 seconds
+[2025-11-27T08:02:17.597+0000] {processor.py:157} INFO - Started process (PID=236) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:02:17.598+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:02:17.599+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:02:17.599+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:02:17.611+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:02:17.710+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:02:17.709+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T08:02:17.710+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:02:17.710+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:02:17.720+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:02:17.720+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:02:17.741+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.147 seconds
+[2025-11-27T08:02:47.843+0000] {processor.py:157} INFO - Started process (PID=238) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:02:47.844+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:02:47.846+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:02:47.845+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:02:47.858+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:02:47.970+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:02:47.969+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T08:02:47.970+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:02:47.970+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:02:47.979+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:02:47.979+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:02:47.998+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.159 seconds
+[2025-11-27T08:03:18.037+0000] {processor.py:157} INFO - Started process (PID=240) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:03:18.038+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:03:18.039+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:03:18.038+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:03:18.050+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:03:18.091+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:03:18.091+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:03:18.103+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:03:18.103+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:03:18.121+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.088 seconds
+[2025-11-27T08:03:48.231+0000] {processor.py:157} INFO - Started process (PID=242) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:03:48.232+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:03:48.233+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:03:48.232+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:03:48.245+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:03:48.346+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:03:48.346+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T08:03:48.346+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:03:48.346+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:03:48.356+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:03:48.355+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:03:48.376+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.149 seconds
+[2025-11-27T08:04:18.425+0000] {processor.py:157} INFO - Started process (PID=244) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:04:18.426+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:04:18.428+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:18.427+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:04:18.445+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:04:18.511+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:18.511+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:04:18.537+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:18.536+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:04:18.572+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.151 seconds
+[2025-11-27T08:04:19.605+0000] {processor.py:157} INFO - Started process (PID=246) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:04:19.606+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:04:19.607+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:19.607+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:04:19.621+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:04:19.638+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:19.638+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:04:19.652+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:19.652+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:04:19.672+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.071 seconds
+[2025-11-27T08:04:49.776+0000] {processor.py:157} INFO - Started process (PID=248) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:04:49.777+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:04:49.778+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:49.777+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:04:49.789+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:04:49.887+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:49.886+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T08:04:49.887+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:49.887+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:04:49.896+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:49.896+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:04:49.913+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.141 seconds
+[2025-11-27T08:04:59.374+0000] {processor.py:157} INFO - Started process (PID=33) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:04:59.375+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:04:59.376+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:59.376+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:04:59.390+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:04:59.423+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:59.423+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:04:59.452+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:04:59.452+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:04:59.477+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.107 seconds
+[2025-11-27T08:05:29.586+0000] {processor.py:157} INFO - Started process (PID=65) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:05:29.587+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:05:29.588+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:05:29.587+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:05:29.601+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:05:29.635+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:05:29.634+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:05:29.649+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:05:29.648+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:05:29.670+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.089 seconds
+[2025-11-27T08:05:59.774+0000] {processor.py:157} INFO - Started process (PID=93) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:05:59.775+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:05:59.775+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:05:59.775+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:05:59.787+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:05:59.889+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:05:59.889+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T08:05:59.889+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:05:59.889+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:06:00.006+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:06:00.006+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:06:00.023+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.253 seconds
+[2025-11-27T08:06:30.102+0000] {processor.py:157} INFO - Started process (PID=109) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:06:30.103+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:06:30.104+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:06:30.104+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:06:30.117+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:06:30.151+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:06:30.150+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:06:30.163+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:06:30.163+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:06:30.181+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.082 seconds
+[2025-11-27T08:07:00.296+0000] {processor.py:157} INFO - Started process (PID=111) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:07:00.297+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:07:00.298+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:07:00.298+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:07:00.313+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:07:00.515+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:07:00.515+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T08:07:00.515+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:07:00.515+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:07:00.526+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:07:00.525+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:07:00.564+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.272 seconds
+[2025-11-27T08:07:30.653+0000] {processor.py:157} INFO - Started process (PID=113) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:07:30.654+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:07:30.655+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:07:30.654+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:07:30.667+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:07:30.701+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:07:30.701+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:07:30.835+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:07:30.835+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:07:30.850+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.202 seconds
+[2025-11-27T08:08:00.932+0000] {processor.py:157} INFO - Started process (PID=115) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:08:00.933+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:08:00.934+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:08:00.934+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:08:00.946+0000] {processor.py:839} INFO - DAG(s) dict_keys(['taxi_streaming_pipeline']) retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:08:01.153+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:08:01.153+0000] {security.py:708} INFO - Not syncing DAG-level permissions for DAG 'DAG:taxi_streaming_pipeline' as access control is unset.
+[2025-11-27T08:08:01.154+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:08:01.154+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2025-11-27T08:08:01.163+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:08:01.163+0000] {dag.py:3696} INFO - Setting next_dagrun for taxi_streaming_pipeline to None, run_after=None
+[2025-11-27T08:08:01.185+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.257 seconds
+[2025-11-27T08:08:05.083+0000] {processor.py:157} INFO - Started process (PID=116) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:08:05.084+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:08:05.084+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:08:05.084+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:08:05.086+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:08:05.086+0000] {dagbag.py:324} INFO - File /opt/airflow/dags/orch.py assumed to contain no DAGs. Skipping.
+[2025-11-27T08:08:05.086+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:08:05.108+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.028 seconds
+[2025-11-27T08:08:35.359+0000] {processor.py:157} INFO - Started process (PID=119) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:08:35.361+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:08:35.362+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:08:35.361+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:08:35.363+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:08:35.363+0000] {dagbag.py:324} INFO - File /opt/airflow/dags/orch.py assumed to contain no DAGs. Skipping.
+[2025-11-27T08:08:35.363+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:08:35.397+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.049 seconds
+[2025-11-27T08:09:05.688+0000] {processor.py:157} INFO - Started process (PID=123) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:09:05.689+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:09:05.690+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:09:05.689+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:09:05.691+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:09:05.691+0000] {dagbag.py:324} INFO - File /opt/airflow/dags/orch.py assumed to contain no DAGs. Skipping.
+[2025-11-27T08:09:05.691+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:09:05.709+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.025 seconds
+[2025-11-27T08:09:35.798+0000] {processor.py:157} INFO - Started process (PID=125) to work on /opt/airflow/dags/orch.py
+[2025-11-27T08:09:35.799+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/orch.py for tasks to queue
+[2025-11-27T08:09:35.800+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:09:35.800+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/orch.py
+[2025-11-27T08:09:35.801+0000] {logging_mixin.py:151} INFO - [2025-11-27T08:09:35.801+0000] {dagbag.py:324} INFO - File /opt/airflow/dags/orch.py assumed to contain no DAGs. Skipping.
+[2025-11-27T08:09:35.801+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/orch.py
+[2025-11-27T08:09:35.818+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/orch.py took 0.025 seconds

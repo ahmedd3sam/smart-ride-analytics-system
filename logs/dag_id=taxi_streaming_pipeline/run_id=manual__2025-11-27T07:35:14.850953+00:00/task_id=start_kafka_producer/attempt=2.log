@@ -1,0 +1,24 @@
+[2025-11-27T07:36:03.475+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: taxi_streaming_pipeline.start_kafka_producer manual__2025-11-27T07:35:14.850953+00:00 [queued]>
+[2025-11-27T07:36:03.492+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: taxi_streaming_pipeline.start_kafka_producer manual__2025-11-27T07:35:14.850953+00:00 [queued]>
+[2025-11-27T07:36:03.493+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2025-11-27T07:36:03.530+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): start_kafka_producer> on 2025-11-27 07:35:14.850953+00:00
+[2025-11-27T07:36:03.540+0000] {standard_task_runner.py:57} INFO - Started process 106 to run task
+[2025-11-27T07:36:03.547+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'taxi_streaming_pipeline', 'start_kafka_producer', 'manual__2025-11-27T07:35:14.850953+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/taxi_pipeline_dag.py', '--cfg-path', '/tmp/tmphhjcw97f']
+[2025-11-27T07:36:03.553+0000] {standard_task_runner.py:85} INFO - Job 19: Subtask start_kafka_producer
+[2025-11-27T07:36:03.694+0000] {task_command.py:415} INFO - Running <TaskInstance: taxi_streaming_pipeline.start_kafka_producer manual__2025-11-27T07:35:14.850953+00:00 [running]> on host d629b7fb5869
+[2025-11-27T07:36:03.912+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Menna' AIRFLOW_CTX_DAG_ID='taxi_streaming_pipeline' AIRFLOW_CTX_TASK_ID='start_kafka_producer' AIRFLOW_CTX_EXECUTION_DATE='2025-11-27T07:35:14.850953+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-27T07:35:14.850953+00:00'
+[2025-11-27T07:36:03.916+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-27T07:36:03.919+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', '\n        echo "Starting S3 to Kafka Producer..."\n        # Try multiple possible paths for the producer script\n        if [ -f "/opt/airflow/dags/../producer/s3_to_kafka.py" ]; then\n            python3 /opt/airflow/dags/../producer/s3_to_kafka.py\n        elif [ -f "/root/s3-kafka-flink-pipeline/producer/s3_to_kafka.py" ]; then\n            python3 /root/s3-kafka-flink-pipeline/producer/s3_to_kafka.py\n        elif [ -f "$HOME/s3-kafka-flink-pipeline/producer/s3_to_kafka.py" ]; then\n            python3 $HOME/s3-kafka-flink-pipeline/producer/s3_to_kafka.py\n        else\n            echo "Error: Could not find producer script"\n            exit 1\n        fi\n        echo "Producer completed successfully"\n        ']
+[2025-11-27T07:36:03.943+0000] {subprocess.py:86} INFO - Output:
+[2025-11-27T07:36:03.949+0000] {subprocess.py:93} INFO - Starting S3 to Kafka Producer...
+[2025-11-27T07:36:03.950+0000] {subprocess.py:93} INFO - Error: Could not find producer script
+[2025-11-27T07:36:03.952+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-11-27T07:36:03.979+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-27T07:36:03.985+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=taxi_streaming_pipeline, task_id=start_kafka_producer, execution_date=20251127T073514, start_date=20251127T073603, end_date=20251127T073603
+[2025-11-27T07:36:04.010+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 19 for task start_kafka_producer (Bash command failed. The command returned a non-zero exit code 1.; 106)
+[2025-11-27T07:36:04.043+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-11-27T07:36:04.101+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
